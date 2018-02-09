@@ -47,7 +47,7 @@ function campos_quiz() {
 
 /*CP quiz*/
 
-function crear_post_type_quiz() {
+function quizbook_posttype() {
 
 // Etiquetas para el Post Type
 	$labels = array(
@@ -85,7 +85,7 @@ function crear_post_type_quiz() {
 		'show_in_nav_menus'   => true,
 		'show_in_admin_bar'   => true,
 		'menu_position'       => 6,
-		'menu_icon'           => 'dashicons-welcome-lear-more',
+		'menu_icon'           => 'dashicons-welcome-learn-more',
 		'can_export'          => true,
 		'has_archive'         => false,
 		'exclude_from_search' => false,
@@ -103,7 +103,12 @@ function crear_post_type_quiz() {
 
 }
 
-add_action( 'init', 'crear_post_type_quiz', 0 );
+add_action( 'init', 'quizbook_posttype', 0 );
 
+
+function quizbook_rewrite_flush(){
+	quizbook_posttype();
+	flush_rewrite_rules();
+}
 
 ?>
