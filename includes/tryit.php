@@ -1,7 +1,6 @@
 <?php 
 
 
-
 /*============= cargando archivos==============*/
 /*
 function my_rewrite_flush() {
