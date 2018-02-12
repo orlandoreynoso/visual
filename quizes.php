@@ -46,5 +46,10 @@ register_deactivation_hook( __FILE__, 'quizbook_remover_role');
 */
 require_once plugin_dir_path( __FILE__ ) . 'includes/shortcode.php';
 
+/*
+* add file about functiones
+*/
+require_once plugin_dir_path( __FILE__ ) . 'includes/funciones.php';
+
 
 ?>
