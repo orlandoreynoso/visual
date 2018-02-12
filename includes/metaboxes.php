@@ -35,7 +35,7 @@ function quizbook_metaboxes($post){
 			<label for="respuesta_1">a)</label>
 		</th>
 		<td>
-			<input value= "<?php echo get_post_meta( $post->ID, 'qb_respuesta_1',true ); ?>" type="text" id="respuesta_1" name = "qb_respuesta_1" class="regular-text">
+			<input value= "<?php echo esc_attr( get_post_meta( $post->ID, 'qb_respuesta_1',true ) ); ?>" type="text" id="respuesta_1" name = "qb_respuesta_1" class="regular-text">
 		</td>
 	</tr>
 	<tr>
@@ -43,7 +43,7 @@ function quizbook_metaboxes($post){
 			<label for="respuesta_2">b)</label>
 		</th>
 		<td>
-			<input value= "<?php echo get_post_meta( $post->ID, 'qb_respuesta_2',true ); ?>" type="text" id="respuesta_2" name = "qb_respuesta_2" class="regular-text">
+			<input value= "<?php echo esc_attr( get_post_meta( $post->ID, 'qb_respuesta_2',true ) ); ?>" type="text" id="respuesta_2" name = "qb_respuesta_2" class="regular-text">
 		</td>
 	</tr>
 	<tr>
@@ -51,7 +51,7 @@ function quizbook_metaboxes($post){
 			<label for="respuesta_3">c)</label>
 		</th>
 		<td>
-			<input value= "<?php echo get_post_meta( $post->ID, 'qb_respuesta_3',true ); ?>" type="text" id="respuesta_3" name = "qb_respuesta_3" class="regular-text">
+			<input value= "<?php echo esc_attr( get_post_meta( $post->ID, 'qb_respuesta_3',true ) ); ?>" type="text" id="respuesta_3" name = "qb_respuesta_3" class="regular-text">
 		</td>
 	</tr>
 	<tr>
@@ -59,7 +59,7 @@ function quizbook_metaboxes($post){
 			<label for="respuesta_4">d)</label>
 		</th>
 		<td>
-			<input value= "<?php echo get_post_meta( $post->ID, 'qb_respuesta_4',true ); ?>" type="text" id="respuesta_4" name = "qb_respuesta_4" class="regular-text">
+			<input value= "<?php echo esc_attr( get_post_meta( $post->ID, 'qb_respuesta_4',true ) ); ?>" type="text" id="respuesta_4" name = "qb_respuesta_4" class="regular-text">
 		</td>
 	</tr>
 	<tr>
@@ -67,7 +67,7 @@ function quizbook_metaboxes($post){
 			<label for="respuesta_5">e)</label>
 		</th>
 		<td>
-			<input value= "<?php echo get_post_meta( $post->ID, 'qb_respuesta_5',true ); ?>" type="text" id="respuesta_5" name = "qb_respuesta_5" class="regular-text">
+			<input value= "<?php echo esc_attr( get_post_meta( $post->ID, 'qb_respuesta_5',true ) ); ?>" type="text" id="respuesta_5" name = "qb_respuesta_5" class="regular-text">
 		</td>
 	</tr>
 	<tr>
@@ -75,7 +75,7 @@ function quizbook_metaboxes($post){
 			<label for="respuesta_correcta">Respuesta correcta</label>
 		</th>
 		<td>
-			<?php $respuesta = get_post_meta( $post->ID, 'quizbook_correcta',true ); ?>
+			<?php $respuesta = esc_html( get_post_meta( $post->ID, 'quizbook_correcta',true ) ); ?>
 			<select name="quizbook_correcta" id="respuesta_correcta" class="postbox">
 				<option value="">Elige la respuesta correcta</option>
 				<option <?php selected( $respuesta, 'qb_respuesta:a' ); ?> value="qb_respuesta:a">a</option>

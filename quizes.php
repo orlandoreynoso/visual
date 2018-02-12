@@ -21,6 +21,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 */
 require_once plugin_dir_path( __FILE__ ) . 'includes/posttypes.php';
 
+/*
+* Regenera las reglas de las URL al activar
+*/
+register_activation_hook( __FILE__, 'quizbook_rewrite_flush');
 
 /*
 * Añade el post type de Quizes
@@ -30,8 +34,17 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/metaboxes.php';
 
 
 /*
-* Regenera las reglas de las URL al activar
+* Añade el roles y capabilities a nuestro quiz
 */
-register_activation_hook( __FILE__, 'quizbook_rewrite_flush');
+
+require_once plugin_dir_path( __FILE__ ) . 'includes/roles.php';
+register_activation_hook( __FILE__, 'quizbook_crear_role');
+register_deactivation_hook( __FILE__, 'quizbook_remover_role');
+
+/*
+* add funcion about shortcode
+*/
+require_once plugin_dir_path( __FILE__ ) . 'includes/shortcode.php';
+
 
 ?>
