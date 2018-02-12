@@ -51,5 +51,11 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/shortcode.php';
 */
 require_once plugin_dir_path( __FILE__ ) . 'includes/funciones.php';
 
+/*
+* add file about scrips js and styles css
+*/
+require_once plugin_dir_path( __FILE__ ) . 'includes/scripts.php';
+
+
 
 ?>

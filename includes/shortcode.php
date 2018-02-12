@@ -7,14 +7,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /*
 * Creando el shortcode: [quizbook]
+* Creando el shortcode 2da version: [quizbook preguntas ="" orden =""]  
 */
 
 
-function quizbook_shortcode(){
+function quizbook_shortcode($atts){
+/*
+	echo "<pre>";
+	var_dump($atts);
+	echo "</pre>";
+*/
 
 	$args = array(
 		'post_type' => 'quiz',
-		'posts_per_page' => 20
+		'posts_per_page' => $atts['preguntas'],
+		'orderby' => $atts['orden']
 	);
 
 	$quizbook = new WP_Query($args);
