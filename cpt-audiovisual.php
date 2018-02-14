@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: quizes course
+Plugin Name: Custom Post Type Audivisual
 Plugin URI:
 Description: information about course
 Version:     1.0
@@ -31,30 +31,30 @@ register_activation_hook( __FILE__, 'quizbook_rewrite_flush');
 * revisar versiones anteriores en tryit.php
 */
 require_once plugin_dir_path( __FILE__ ) . 'includes/metaboxes.php';
-
-
-/*
-* Añade el roles y capabilities a nuestro quiz
-*/
-
-require_once plugin_dir_path( __FILE__ ) . 'includes/roles.php';
-register_activation_hook( __FILE__, 'quizbook_crear_role');
-register_deactivation_hook( __FILE__, 'quizbook_remover_role');
-
-/*
-* add funcion about shortcode
-*/
-require_once plugin_dir_path( __FILE__ ) . 'includes/shortcode.php';
-
-/*
-* add file about functiones
-*/
-require_once plugin_dir_path( __FILE__ ) . 'includes/funciones.php';
-
-/*
-* add file about scrips js and styles css
-*/
-require_once plugin_dir_path( __FILE__ ) . 'includes/scripts.php';
+//
+//
+// /*
+// * Añade el roles y capabilities a nuestro quiz
+// */
+//
+// require_once plugin_dir_path( __FILE__ ) . 'includes/roles.php';
+// register_activation_hook( __FILE__, 'quizbook_crear_role');
+// register_deactivation_hook( __FILE__, 'quizbook_remover_role');
+//
+// /*
+// * add funcion about shortcode
+// */
+// require_once plugin_dir_path( __FILE__ ) . 'includes/shortcode.php';
+//
+// /*
+// * add file about functiones
+// */
+// require_once plugin_dir_path( __FILE__ ) . 'includes/funciones.php';
+//
+// /*
+// * add file about scrips js and styles css
+// */
+// require_once plugin_dir_path( __FILE__ ) . 'includes/scripts.php';
 
 
 
