@@ -27,6 +27,17 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/posttypes.php';
 register_activation_hook( __FILE__, 'quizbook_rewrite_flush');
 
 /*
+* Load file CMB2
+*/
+
+require_once plugin_dir_path( __FILE__ ) . 'CMB2/init.php';
+/*
+if ( file_exists( dirname( __FILE__ ) . '/CMB2/init.php' ) ) {
+	require_once dirname( __FILE__ ) . '/CMB2/init.php';
+}
+*/
+
+/*
 * Añade el post type de Quizes
 * revisar versiones anteriores en tryit.php
 */
