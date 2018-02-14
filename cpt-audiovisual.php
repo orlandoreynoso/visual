@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 /*
-* Añade el post type de Quizes
+* Añade el post type de biografía
 * revisar versiones anteriores en tryit.php
 */
 require_once plugin_dir_path( __FILE__ ) . 'includes/posttypes.php';
@@ -24,7 +24,19 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/posttypes.php';
 /*
 * Regenera las reglas de las URL al activar
 */
-register_activation_hook( __FILE__, 'quizbook_rewrite_flush');
+register_activation_hook( __FILE__, 'bio_rewrite_flush');
+
+/*
+* Añade el post type de biografía
+* revisar versiones anteriores en tryit.php
+*/
+require_once plugin_dir_path( __FILE__ ) . 'includes/posttypevideoteca.php';
+
+/*
+* Regenera las reglas de las URL al activar
+*/
+register_activation_hook( __FILE__, 'videoteca_rewrite_flush');
+
 
 /*
 * Load file CMB2

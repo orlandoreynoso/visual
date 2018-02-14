@@ -8,24 +8,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 /*
-* CP bio
+* CP videoteca
 */
 
-function godoy_cpt_bio() {
+function godoy_cpt_videoteca() {
 
 // Etiquetas para el Post Type
 	$labels = array(
-		'name'                => _x( 'bio', 'Post Type General Name', 'godoy' ),
-		'singular_name'       => _x( 'bio', 'Post Type Singular Name', 'godoy' ),
-		'menu_name'           => __( 'bio', 'godoy' ),
-		'parent_item_colon'   => __( 'bio Padre', 'godoy' ),
-		'all_items'           => __( 'Todas las bio', 'godoy' ),
-		'view_item'           => __( 'Ver bio', 'godoy' ),
-		'add_new_item'        => __( 'Agregar Nuevo bio', 'godoy' ),
-		'add_new'             => __( 'Agregar Nuevo bio', 'godoy' ),
-		'edit_item'           => __( 'Editar bio', 'godoy' ),
-		'update_item'         => __( 'Actualizar bio', 'godoy' ),
-		'search_items'        => __( 'Buscar bio', 'godoy' ),
+		'name'                => _x( 'videoteca', 'Post Type General Name', 'godoy' ),
+		'singular_name'       => _x( 'videoteca', 'Post Type Singular Name', 'godoy' ),
+		'menu_name'           => __( 'videoteca', 'godoy' ),
+		'parent_item_colon'   => __( 'videoteca Padre', 'godoy' ),
+		'all_items'           => __( 'Todas las videoteca', 'godoy' ),
+		'view_item'           => __( 'Ver videoteca', 'godoy' ),
+		'add_new_item'        => __( 'Agregar Nuevo videoteca', 'godoy' ),
+		'add_new'             => __( 'Agregar Nuevo videoteca', 'godoy' ),
+		'edit_item'           => __( 'Editar videoteca', 'godoy' ),
+		'update_item'         => __( 'Actualizar videoteca', 'godoy' ),
+		'search_items'        => __( 'Buscar videoteca', 'godoy' ),
 		'not_found'           => __( 'No encontrado', 'godoy' ),
 		'not_found_in_trash'  => __( 'No encontrado en la papelera', 'godoy' ),
 	);
@@ -33,8 +33,8 @@ function godoy_cpt_bio() {
 // Otras opciones para el post type
 
 	$args = array(
-		'label'               => __( 'bio', 'godoy' ),
-		'description'         => __( 'bio news and reviews', 'godoy' ),
+		'label'               => __( 'videoteca', 'godoy' ),
+		'description'         => __( 'videoteca news and reviews', 'godoy' ),
 		'labels'              => $labels,
 		// Todo lo que soporta este post type
 		'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions','page-attributes','post-formats'),
@@ -49,29 +49,29 @@ function godoy_cpt_bio() {
 		'show_in_nav_menus'   => true,
 		'show_in_admin_bar'   => true,
 		'menu_position'       => 6,
-		'menu_icon'           => 'dashicons-welcome-learn-more',
+		'menu_icon'           => 'dashicons-video-alt',
 		'can_export'          => true,
 		'has_archive'         => false,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
-//		'rewrite'           => array('slug' => 'bio'), // Permalinks format
-		"rewrite" => array( "slug" => "bio"),
+//		'rewrite'           => array('slug' => 'videoteca'), // Permalinks format
+		"rewrite" => array( "slug" => "videoteca"),
 		//"taxonomies" => array( "category", "post_tag" ),
 		'query_var' => true,
-		//'rewrite'           => array('slug' => 'bio/%proyectox%'), // Permalinks format
+		//'rewrite'           => array('slug' => 'videoteca/%proyectox%'), // Permalinks format
 	);
 
 	// Por ultimo registramos el post type
-	register_post_type( 'bio', $args );
+	register_post_type( 'videoteca', $args );
 
 }
 
-add_action( 'init', 'godoy_cpt_bio', 0 );
+add_action( 'init', 'godoy_cpt_videoteca', 0 );
 
 
-function bio_rewrite_flush(){
-	godoy_cpt_bio();
+function videoteca_rewrite_flush(){
+	godoy_cpt_videoteca();
 	flush_rewrite_rules();
 }
 
