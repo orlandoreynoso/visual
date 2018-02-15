@@ -39,6 +39,12 @@ register_activation_hook( __FILE__, 'videoteca_rewrite_flush');
 
 
 /*
+* cpt slider
+*/
+
+require_once plugin_dir_path( __FILE__ ) . 'includes/posttypeslide.php';
+
+/*
 * Load file CMB2
 */
 
