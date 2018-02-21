@@ -42,7 +42,7 @@ function godoy_cpt_videoteca() {
 		/* Un Post Type hierarchical es como las paginas y puede tener padres e hijos.
 		* Uno sin hierarchical es como los posts
 		*/
-		'hierarchical'        => true, /* comportamiento >> true: páginas , false: Entradas */
+		'hierarchical'        => false, /* comportamiento >> true: páginas , false: Entradas */
 		'public'              => true,
 		'show_ui'             => true,
 		'show_in_menu'        => true,
